@@ -1,13 +1,13 @@
 CreateThread(function()
     while true do
         Wait(Config.Minutes * 60000)
-        TriggerClientEvent('ox_lib:notify', -1, { title = Config.OxNotifyTitle, icon= Config.OxNotifyIcon, position = Config.OxNotifyPosition, description = (_U('waiting_5_minutes'))})
+        TriggerClientEvent('ox_lib:notify', -1, { title = Config.OxNotifyTitle, icon= Config.OxNotifyIcon, description = Config.Timer5MINUTES, position = Config.OxNotifyPosition})
         Wait(300000)
-        TriggerClientEvent('ox_lib:notify', -1, { title = Config.OxNotifyTitle, icon= Config.OxNotifyIcon, position = Config.OxNotifyPosition, description = (_U('waiting_1_minute'))})
+        TriggerClientEvent('ox_lib:notify', -1, { title = Config.OxNotifyTitle, icon= Config.OxNotifyIcon, description = Config.Timer1MINUTE, position = Config.OxNotifyPosition})
         Wait(45000)
-        TriggerClientEvent('ox_lib:notify', -1, { title = Config.OxNotifyTitle, icon= Config.OxNotifyIcon, position = Config.OxNotifyPosition, description = (_U('waiting_10_seconds'))})
+        TriggerClientEvent('ox_lib:notify', -1, { title = Config.OxNotifyTitle, icon= Config.OxNotifyIcon, description = Config.Timer10SECONDS, position = Config.OxNotifyPosition})
         Wait(10000)
-        TriggerClientEvent('ox_lib:notify', -1, { title = Config.OxNotifyTitle, icon= Config.OxNotifyIcon, position = Config.OxNotifyPosition, description = (_U('waiting_5_seconds'))})
+        TriggerClientEvent('ox_lib:notify', -1, { title = Config.OxNotifyTitle, icon= Config.OxNotifyIcon, description = Config.Timer5SECONDS, position = Config.OxNotifyPosition})
         Wait(5000)
 
         for i, veh in pairs(GetAllVehicles()) do
@@ -17,7 +17,7 @@ CreateThread(function()
                 end
             end
         end
-        TriggerClientEvent('ox_lib:notify', -1, { title = Config.OxNotifyTitle, icon= Config.OxNotifyIcon, position = Config.OxNotifyPosition, description = (_U('vehicles_deleted'))})
+        TriggerClientEvent('ox_lib:notify', -1, { title = Config.OxNotifyTitle, icon= Config.OxNotifyIcon, description = Config.VehiclesDeleted, position = Config.OxNotifyPosition})
     end
 end)
 
